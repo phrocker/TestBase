@@ -7,7 +7,6 @@
  *              Copyright (C) 2006 @n@n
  *  
  *  @author     Marc Parisi
- *  @author     mparisi@dtims.com                                                
  *                                                              
  *  @attention
  *              This program is free software; you can redistribute it and/or modify  
@@ -26,8 +25,8 @@
  *              59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             
  */ 
 /////////////////////////////////////////////////////////////////////////////
-#ifndef DTIMEM_H
-#define DTIMEM_H
+#ifndef TBSMEM_H
+#define TBSMEM_H
 
 #include "page_allocator_defs.h"
 #include <linux/proc_fs.h>

@@ -1,0 +1,80 @@
+[Global]
+CurrentProject=PageAllocator.vpj
+[ProjectDates]
+PageAllocator.vpj=20060713074129000
+[ActiveConfig]
+PageAllocator.vpj=Debug
+[TreeExpansion2]
+- PageAllocator.vpj
+  - Source Files
+  - Header Files
+  + Resource Files
+  + Bitmaps
+  - Other Files
+scroll:0
+[State]
+SCREEN: 1024 768 0 26 1024 695 0 0 N 0 0 0 0 808 357
+CWD: 
+BUFFER: BN="../../../TestBase/CommonLibrary/cpuid.h"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=5 BI=67 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="page_allocator_defs.h"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.78 CL=2 LE=0 CX=2 CY=6 WI=5 BI=49 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="../../../TestBase/CommonLibrary/cpuid.c"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.16910 CL=56 LE=0 CX=56 CY=12 WI=5 BI=71 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="Makefile"
+BI: MA=1 74 1  TABS=1 9  WWS=1 IWT=1 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=Makefile	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.121 CL=49 LE=0 CX=49 CY=7 WI=5 BI=74 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="page_alloc.h"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.12695 CL=50 LE=0 CX=50 CY=8 WI=5 BI=77 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="page_alloc.c"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.17259 CL=5 LE=0 CX=5 CY=13 WI=5 BI=92 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 177 806 177 0 0 N  WF=0 WT=4 "Default Fixed Font,10,0,1"
+BUFFER: BN="page_alloc.h"
+VIEW: LN=.12695 CL=50 LE=0 CX=50 CY=8 WI=128 BI=77 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 177 806 177 0 0 N  WF=0 WT=7 "Default Fixed Font,10,0,1"
+BUFFER: BN="page_alloc.c"
+VIEW: LN=.0 CL=1 LE=0 CX=2 CY=0 WI=129 BI=92 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 806 177 0 0 N  WF=0 WT=8 "Default Fixed Font,10,0,1"
+BUFFER: BN="page_alloc.c"
+VIEW: LN=.26796 CL=9 LE=0 CX=10 CY=8 WI=130 BI=92 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 544 238 0 0 N  WF=0 WT=6 "Default Fixed Font,10,0,1"
+BUFFER: BN="Makefile"
+VIEW: LN=.121 CL=49 LE=0 CX=49 CY=7 WI=131 BI=74 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 544 239 0 0 N  WF=0 WT=9 "Default Fixed Font,10,0,1"
+BUFFER: BN="../../../TestBase/CommonLibrary/cpuid.c"
+VIEW: LN=.16910 CL=56 LE=0 CX=56 CY=12 WI=132 BI=71 HT=0 HN=0 HF=0 HC=4
+WINDOW: 50 50 544 238 0 0 N  WF=0 WT=1 "Default Fixed Font,10,0,1"
+BUFFER: BN="page_allocator_defs.h"
+VIEW: LN=.78 CL=2 LE=0 CX=2 CY=6 WI=133 BI=49 HT=0 HN=0 HF=0 HC=4
+WINDOW: 100 100 544 239 0 0 N  WF=0 WT=3 "Default Fixed Font,10,0,1"
+BUFFER: BN="../../../TestBase/CommonLibrary/cpuid.h"
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=134 BI=67 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 806 177 0 0 N  WF=0 WT=4 "Default Fixed Font,10,0,1"
+BUFFER: BN="page_alloc.h"
+VIEW: LN=.17557 CL=5 LE=0 CX=5 CY=8 WI=136 BI=77 HT=0 HN=0 HF=0 HC=4
+WINDOW: 100 100 544 238 0 0 N  WF=0 WT=5 "Default Fixed Font,10,0,1"
+BUFFER: BN="page_allocator_defs.h"
+VIEW: LN=.840 CL=1 LE=0 CX=1 CY=12 WI=139 BI=49 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 544 238 10 274 M  WF=0 WT=2 "Default Fixed Font,10,0,1"
+BUFFER: BN="page_alloc.c"
+VIEW: LN=.22922 CL=8 LE=0 CX=9 CY=13 WI=127 BI=92 HT=0 HN=0 HF=0 HC=4
+MARK: MT=CHAR BN="/home/mparisi/LinuxTestSoftware/Kernel_2.6.10/custom_modules/PageAllocator/page_alloc.c" SL=.22922 SC=8 LL=.22922 EC=22
+FILEHIST: 9
+pagealloc.c
+allmem.c
+allmem.h
+../../../TestBase/CommonLibrary/cpuid.c
+../../../TestBase/CommonLibrary/cpuid.h
+Makefile
+page_alloc.h
+page_allocator_defs.h
+page_alloc.c
+DEBUG: 0 0 0 0 3 0
+printf
+strcpy
+std::*

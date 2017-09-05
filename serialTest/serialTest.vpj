@@ -1,0 +1,326 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+	Version="10.0"
+	VendorName="SlickEdit"
+	WorkingDir="."
+	BuildSystem="automakefile"
+	BuildMakeFile="%rp%rn.mak">
+	<Config
+		Name="Debug"
+		Type="gnuc"
+		DebugCallbackName="gdb"
+		Version="1"
+		OutputFile="%bdserialTest"
+		CompilerConfigName="Latest Version"
+		Defines="">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				OutputExts="*.o"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='gcc -c %xup %defd -g -o "%bd%n%oe" %i "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link"
+				ShowOnMenu="Never"
+				Dialog="_gnuc_options_form Link"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='gcc %xup -g -static -o "%o" %objs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw"
+				DependsRef="Debug">
+				<Exec CmdLine='gmake -f "%rp%rn.mak" CFG=%b'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw"
+				DependsRef="Debug">
+				<Exec CmdLine='gmake -f "%rp%rn.mak" rebuild CFG=%b'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec
+					CmdLine='vsdebugio -prog "%o" %~other'
+					OtherOptions="--port=1"/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec
+					CmdLine='"%o" %~other'
+					OtherOptions="--port=1"/>
+			</Target>
+			<Target
+				Name="Clean"
+				MenuCaption="&amp;Clean"
+				CaptureOutputWith="ProcessBuffer"
+				ClearProcessBuffer="1"
+				RunFromDir="%rw">
+				<Exec CmdLine='gmake -f "%rp%rn.mak" clean CFG=%b'/>
+			</Target>
+			<Target
+				Name="Clean All"
+				MenuCaption="&amp;Clean All"
+				CaptureOutputWith="ProcessBuffer"
+				ClearProcessBuffer="1"
+				RunFromDir="%rw">
+				<Exec CmdLine='gmake -f "%rp%rn.mak" cleanall CFG=%b'/>
+			</Target>
+			<Target
+				Name="Copy to Experimental"
+				MenuCaption="&amp;Copy to Experimental"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw"
+				ClearProcessBuffer="1">
+				<Exec CmdLine="chmod a+w %rp%o;cp -p %rp%o %(expDir)%on"/>
+			</Target>
+			<Target
+				Name="Copy to Validation"
+				MenuCaption="&amp;Copy to Validation"
+				RunFromDir="%rw"
+				CaptureOutputWith="ProcessBuffer"
+				ClearProcessBuffer="1">
+				<Exec CmdLine="chmod a+w %rp%o;cp -p %rp%o %(valDir)%on"/>
+			</Target>
+			<Target
+				Name="Copy to Production"
+				MenuCaption="&amp;Copy to Production"
+				RunFromDir="%rw"
+				CaptureOutputWith="ProcessBuffer"
+				ClearProcessBuffer="1">
+				<Exec CmdLine="chmod a+w %rp%o;cp -p %rp%o %(proDir)%on"/>
+			</Target>
+			<Target
+				Name="dash"
+				MenuCaption="-"
+				Deletable="0">
+				<Exec/>
+			</Target>
+			<Target
+				Name="GNU C Options"
+				MenuCaption="GNU C &amp;Options..."
+				ShowOnMenu="HideIfNoCmdLine"
+				Deletable="0"
+				SaveOption="SaveNone">
+				<Exec
+					CmdLine="gnucoptions"
+					Type="Slick-C"/>
+			</Target>
+		</Menu>
+		<Includes/>
+		<Libs PreObjects="0">
+			<Lib File="%wpCommonLibrary/%bdCommonLibrary.a"/>
+			<Lib File="-largtable2"/>
+		</Libs>
+		<Dependencies Name="Debug">
+			<Dependency
+				Project="../CommonLibrary/CommonLibrary.vpj"
+				Config="Debug"/>
+		</Dependencies>
+	</Config>
+	<Config
+		Name="Release"
+		Type="gnuc"
+		DebugCallbackName="gdb"
+		Version="1"
+		OutputFile="%bdserialTest"
+		CompilerConfigName="Latest Version"
+		Defines="">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				OutputExts="*.o"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='gcc -c %xup %defd -O2 -o "%bd%n%oe" %i "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link"
+				ShowOnMenu="Never"
+				Dialog="_gnuc_options_form Link"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='gcc %xup -O2 -static -o "%o" %objs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw"
+				DependsRef="Release">
+				<Exec CmdLine='gmake -f "%rp%rn.mak" CFG=%b'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw"
+				DependsRef="Release">
+				<Exec CmdLine='gmake -f "%rp%rn.mak" rebuild CFG=%b'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec
+					CmdLine='vsdebugio -prog "%o" %~other'
+					OtherOptions="--port=1"/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec
+					CmdLine='"%o" %~other'
+					OtherOptions="--port=1"/>
+			</Target>
+			<Target
+				Name="Clean"
+				MenuCaption="&amp;Clean"
+				CaptureOutputWith="ProcessBuffer"
+				ClearProcessBuffer="1"
+				RunFromDir="%rw">
+				<Exec CmdLine='gmake -f "%rp%rn.mak" clean CFG=%b'/>
+			</Target>
+			<Target
+				Name="Clean All"
+				MenuCaption="&amp;Clean All"
+				CaptureOutputWith="ProcessBuffer"
+				ClearProcessBuffer="1"
+				RunFromDir="%rw">
+				<Exec CmdLine='gmake -f "%rp%rn.mak" cleanall CFG=%b'/>
+			</Target>
+			<Target
+				Name="Copy to Experimental"
+				MenuCaption="&amp;Copy to Experimental"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw"
+				ClearProcessBuffer="1">
+				<Exec CmdLine="chmod a+w %rp%o;cp -p %rp%o %(expDir)%on"/>
+			</Target>
+			<Target
+				Name="Copy to Validation"
+				MenuCaption="&amp;Copy to Validation"
+				RunFromDir="%rw"
+				CaptureOutputWith="ProcessBuffer"
+				ClearProcessBuffer="1">
+				<Exec CmdLine="chmod a+w %rp%o;cp -p %rp%o %(valDir)%on"/>
+			</Target>
+			<Target
+				Name="Copy to Production"
+				MenuCaption="&amp;Copy to Production"
+				RunFromDir="%rw"
+				CaptureOutputWith="ProcessBuffer"
+				ClearProcessBuffer="1">
+				<Exec CmdLine="chmod a+w %rp%o;cp -p %rp%o %(proDir)%on"/>
+			</Target>
+			<Target
+				Name="dash"
+				MenuCaption="-"
+				Deletable="0">
+				<Exec/>
+			</Target>
+			<Target
+				Name="GNU C Options"
+				MenuCaption="GNU C &amp;Options..."
+				ShowOnMenu="HideIfNoCmdLine"
+				Deletable="0"
+				SaveOption="SaveNone">
+				<Exec
+					CmdLine="gnucoptions"
+					Type="Slick-C"/>
+			</Target>
+		</Menu>
+		<Dependencies Name="Release">
+			<Dependency
+				Project="../CommonLibrary/CommonLibrary.vpj"
+				Config="Release"/>
+		</Dependencies>
+		<Includes/>
+		<Libs PreObjects="0">
+			<Lib File="%wpCommonLibrary/%bdCommonLibrary.a"/>
+			<Lib File="-largtable2"/>
+		</Libs>
+	</Config>
+	<Files>
+		<Folder
+			Name="Source Files"
+			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl">
+			<F N="serialFunctions.c"/>
+			<F N="serialTest.c"/>
+			<F N="serialTestFunctions.c"/>
+		</Folder>
+		<Folder
+			Name="Header Files"
+			Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.inc;*.sh;*.cpy;*.if">
+			<F N="serialFunctions.h"/>
+			<F N="serialTestFunctions.h"/>
+		</Folder>
+		<Folder
+			Name="Resource Files"
+			Filters="*.ico;*.cur;*.dlg"/>
+		<Folder
+			Name="Bitmaps"
+			Filters="*.bmp"/>
+		<Folder
+			Name="Other Files"
+			Filters="">
+			<F
+				N="serialTest.mak"
+				Type="Makefile"/>
+		</Folder>
+	</Files>
+</Project>

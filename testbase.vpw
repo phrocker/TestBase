@@ -1,0 +1,20 @@
+<!DOCTYPE Workspace SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpw.dtd">
+<Workspace Version="10.0" VendorName="SlickEdit">
+	<Environment>
+		<Set Name="expDir" Value="/home/testsoftware/tests/experimental/"/>
+		<Set Name="valDir" Value="/home/testsoftware/tests/validation/"/>
+		<Set Name="proDir" Value="/home/testsoftware/tests/production/"/>
+	</Environment>
+	<Projects>
+		<Project File="biosInfoTest/biosInfoTest.vpj"/>
+		<Project File="CommonLibrary/CommonLibrary.vpj"/>
+		<Project File="cpu_test/cpu_test.vpj"/>
+		<Project File="driveTest/driveTest.vpj"/>
+		<Project File="ledTest/ledTest.vpj"/>
+		<Project File="memoryTest/memoryTest.vpj"/>
+		<Project File="mouseIDTest/mouseIDTest.vpj"/>
+		<Project File="serialTest/serialTest.vpj"/>
+		<Project File="TestDispatcher/TestDispatcher.vpj"/>
+		<Project File="testDispatcherCpuInfo/testDispatcherCpuInfo.vpj"/>
+	</Projects>
+</Workspace>
